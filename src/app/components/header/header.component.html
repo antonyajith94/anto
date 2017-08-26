@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row">
+        <div class="nav nav-default">
+             <input type="text"  class="form-control" name="search" [(ngModel)]="search">
+             <button class="btn btn-primary" (click)="onClick()">Go</button>
+               
+        </div>
+    </div>
+
+    <!-- <h2 *ngIf="toShow">I,m visible</h2>
+
+    <p *ngIf="myname=='antony'">I'm bob</p>
+
+    <h5 *ngFor="let fruit of fruits">{{fruit}}</h5>
+    
+    <ul>
+    <li *ngFor="let student of studs">{{student.name}}-{{student.age}}</li>
+    </ul> -->
+     <div *ngIf="userData">
+              company: {{userData.company || n/a}}<br>
+              login: {{userData.login || n/a}}<br>
+              bio: {{userData.bio || n/a}}<br>
+              blog: {{userData.blog || n/a}}<br>
+              email:{{userData.email || n/a}}<br>
+              Name: {{userData.name || n/a}}<br>
+     </div> 
+
+     <div *ngIf="getRepo">
+        <ul class="list-group">
+            <li class="list-group-item list-group-item-info" align="center" *ngFor="let repo of getRepo">{{repo.name}}----{{repo.description}}</li>
+        </ul>
+     </div>
+</div>    
